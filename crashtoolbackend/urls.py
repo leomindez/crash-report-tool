@@ -24,9 +24,9 @@ import settings
 urlpatterns = [
         url(r'^admin/', include(admin.site.urls)),
     	url(r'^dashboard/', dashboard, name='dashboard'),
-    
+
    	 url(r'^timeline/', timeline, name='timeline'),
-   	 url(r'^accounts/login/$', login, name="login"),
-    
+   	 url(r'^accounts/login/$', include(admin.site.urls)),
+
     url(r'^$', dashboard, name='dashboard'),
 ]
